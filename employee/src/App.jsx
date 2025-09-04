@@ -12,11 +12,13 @@ function App() {
   const [isFinanceClicked, setIsFinanceClicked] = useState(false);
 
   useEffect(() => {
+    setInterval (()=>{
     const today = new Date();
     const datestr = today.toLocaleDateString('en-IN');
     const timeStr = today.toLocaleTimeString(); 
     setTimeNow(timeStr);
     setDateNow(datestr);
+    }, 1000)
   }, []);
 
 

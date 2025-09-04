@@ -15,13 +15,17 @@ function Employee() {
 
         let age = null;
 
-        if (dob_date >= today_date) {
-            if (dob_month >= today_month) {
+        if (today_date >= dob_date) {
+            if (today_month >= dob_month) {
                 age = today_year - dob_year;
             }
+            age = today_year - dob_year-1;
+        } else if(today_month >= dob_month) {
+            age = today_year - dob_year;
         } else {
-            age = today_year - dob_year - 1;
+            age = today_year - dob_year-1;
         }
+        console.log(age);
         setAge(age);
     }
 
