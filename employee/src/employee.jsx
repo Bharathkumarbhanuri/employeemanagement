@@ -40,7 +40,7 @@ function Employee() {
             <form className='mt-8 border border-black py-10 px-16 rounded-lg shadow-lg' onSubmit={handleSubmit}>
                 <div className='flex flex-col'>
                     <input type="text" className='mb-6 w-52 border border-black rounded py-1 px-4' placeholder='employee name' required />
-                    <input type="date" max="2007-12-31" className='mb-6 w-52 border border-black rounded py-1 px-4' onChange={(e) => ageCalc(e.target.value)} required />
+                    <input type="date" className='mb-6 w-52 border border-black rounded py-1 px-4' onChange={(e) => ageCalc(e.target.value)} required />
                     <h1 className='mb-6 text-xl'>Age:{Age}</h1>
                     <select name="department" className='mb-6 w-52 border border-black rounded py-1 px-4'>
                         <option value="accounts">select department</option>
